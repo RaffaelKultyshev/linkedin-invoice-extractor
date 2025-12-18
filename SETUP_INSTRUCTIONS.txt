@@ -27,16 +27,33 @@ Step 4: Open your browser and go to:
    http://localhost:3940
 
 ================================================================================
-TEST IT
+USE THE APP - TWO OPTIONS
 ================================================================================
 
-Step 5: Click "🚀 Start - Open LinkedIn Login"
+OPTION A: ⚡ FAST MODE (Recommended)
+------------------------------------
+Step 5: Click "⚡ Login Fast"
+Step 6: LinkedIn opens → Log in quickly (you have 10 seconds)
+Step 7: Script auto-continues → PDF appears in the app! 🎉
 
-Step 6: LinkedIn opens in Chrome → Log in with your credentials (fingerprint works!)
+OPTION B: ✅ VALIDATION MODE
+------------------------------------
+Step 5: Click "✅ Login with Validation Check"  
+Step 6: LinkedIn opens → Log in (take your time)
+Step 7: Click "I'M LOGGED IN - CONTINUE!" in the app
+Step 8: Script continues → PDF appears in the app! 🎉
 
-Step 7: After you're logged in, click "✅ I'M LOGGED IN - CONTINUE!" in the app
+================================================================================
+EXTRA FEATURES
+================================================================================
 
-Step 8: Wait 5 seconds → Your LinkedIn purchases PDF appears in the app! 🎉
+📧 SEND PDF TO EMAIL:
+   - Enter your email address
+   - Click "Send PDF to Email"
+   - PDF arrives in your inbox instantly!
+
+📂 OPEN FOLDER:
+   - Click "Open Folder" to see where PDFs are saved
 
 ================================================================================
 NOTES
@@ -45,6 +62,6 @@ NOTES
 • Uses YOUR Chrome browser (not a bot), so saved passwords work
 • If macOS asks for permission, click "Allow" for System Events
 • PDF is saved locally in the pdfs/ folder
+• Zero credentials stored - we never see your password
 
 Let me know if you have any questions!
-
