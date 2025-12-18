@@ -28,16 +28,27 @@ streamlit run app.py --server.port 3940
 
 Go to: http://localhost:3940
 
-### 5. Use the app
+## Two Login Modes
 
-1. Click **"🚀 Start - Open LinkedIn Login"**
-2. LinkedIn opens in Chrome → Log in with your credentials (fingerprint works!)
-3. Click **"✅ I'M LOGGED IN - CONTINUE!"** in the app
-4. Wait 5 seconds → Script automatically:
-   - Goes to purchases page
-   - Opens print dialog
-   - Saves as PDF
-5. PDF appears in the app! 🎉
+### ⚡ Fast Mode (Recommended)
+1. Click **"⚡ Login Fast"**
+2. Log in quickly (10 second window)
+3. Script auto-continues → PDF ready!
+4. **No extra clicks needed!**
+
+### ✅ Validation Mode
+1. Click **"✅ Login with Validation Check"**
+2. Log in to LinkedIn (take your time)
+3. Click **"I'M LOGGED IN - CONTINUE!"**
+4. Script continues → PDF ready!
+
+## Features
+
+- 📄 **One-click PDF extraction** - Saves LinkedIn purchases as PDF
+- ⚡ **Fast Mode** - Just login, everything else is automatic
+- 📧 **Email sending** - Send PDF to any email address instantly
+- 📂 **Open folder** - Quick access to saved PDFs
+- 👀 **PDF preview** - View PDFs directly in the app
 
 ## Notes
 
@@ -50,9 +61,10 @@ Go to: http://localhost:3940
 
 - If it asks for permission → Allow "System Events" access
 - If print dialog doesn't open → Click Reset and try again
+- If 10 seconds is too short → Use "Validation Mode" instead
 
 ## Security
 
 ✅ Zero credential storage - you log in yourself via your own browser  
 ✅ All data stays local on your machine  
-✅ No network calls to external servers
+✅ No network calls to external servers (except email sending via TUG Team)

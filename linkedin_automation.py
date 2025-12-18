@@ -7,6 +7,7 @@ import json
 import time
 import subprocess
 import shutil
+import sys
 from pathlib import Path
 from datetime import datetime
 
@@ -42,7 +43,7 @@ def run_applescript(script):
     )
     return result.stdout.strip()
 
-def run_automation():
+def run_automation(fast_mode=False):
     PDF_DIR.mkdir(exist_ok=True)
     
     if STATUS_FILE.exists():
@@ -60,20 +61,26 @@ def run_automation():
         end tell
     ''')
     
-    time.sleep(3)
-    
-    # STEP 2: Wait for user to login (ONLY thing user does!)
-    update_status(
-        "Log in with fingerprint/saved password. Click button when you're logged in.",
-        waiting=True,
-        button_text="I'm logged in ✅"
-    )
-    
-    if not wait_for_user_signal(timeout=300):
-        update_status("Error: Timeout waiting for login")
-        return
-    
-    time.sleep(2)
+    if fast_mode:
+        # Fast mode: assume user is already logged in or will be quickly
+        update_status("⚡ Fast Mode: Waiting 10 seconds for login...")
+        time.sleep(10)  # Give user 10 seconds to login
+    else:
+        # Normal mode: wait for user confirmation
+        time.sleep(3)
+        
+        # STEP 2: Wait for user to login (ONLY thing user does!)
+        update_status(
+            "Log in with fingerprint/saved password. Click button when you're logged in.",
+            waiting=True,
+            button_text="I'm logged in ✅"
+        )
+        
+        if not wait_for_user_signal(timeout=300):
+            update_status("Error: Timeout waiting for login")
+            return
+        
+        time.sleep(2)
     
     # STEP 3: Navigate to purchases page (AUTOMATIC!)
     update_status("Navigating to purchases page...")
@@ -250,4 +257,6 @@ def run_automation():
             update_status("Timeout. Check Desktop for the PDF.")
 
 if __name__ == "__main__":
-    run_automation()
+    # Check for --fast flag
+    fast_mode = "--fast" in sys.argv
+    run_automation(fast_mode=fast_mode)
