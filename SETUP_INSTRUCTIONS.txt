@@ -1,0 +1,50 @@
+Hey! Here's a quick tool I built - LinkedIn Invoice PDF Extractor
+
+📦 Repo: https://github.com/RaffaelKultyshev/linkedin-invoice-extractor
+
+================================================================================
+SETUP (5 minutes, one time)
+================================================================================
+
+Step 1: Open Terminal and run these commands ONE BY ONE:
+
+   git clone https://github.com/RaffaelKultyshev/linkedin-invoice-extractor.git
+   cd linkedin-invoice-extractor
+   pip install streamlit
+
+Step 2: Close ALL Chrome windows (important!)
+
+================================================================================
+RUN THE APP
+================================================================================
+
+Step 3: In Terminal, run:
+
+   streamlit run app.py --server.port 3940
+
+Step 4: Open your browser and go to:
+
+   http://localhost:3940
+
+================================================================================
+TEST IT
+================================================================================
+
+Step 5: Click "🚀 Start - Open LinkedIn Login"
+
+Step 6: LinkedIn opens in Chrome → Log in with your credentials (fingerprint works!)
+
+Step 7: After you're logged in, click "✅ I'M LOGGED IN - CONTINUE!" in the app
+
+Step 8: Wait 5 seconds → Your LinkedIn purchases PDF appears in the app! 🎉
+
+================================================================================
+NOTES
+================================================================================
+
+• Uses YOUR Chrome browser (not a bot), so saved passwords work
+• If macOS asks for permission, click "Allow" for System Events
+• PDF is saved locally in the pdfs/ folder
+
+Let me know if you have any questions!
+
